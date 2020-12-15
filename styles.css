@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  /* we should avoid setting heights to seach things as this 
+causes problem in resposiveness some time they overlap each 
+other and looks weird instead we shoul use padding fo nav elements */
+  /* rather we can use the min-height property to avoid the
+ problem of overlapping */
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+.hero {
+  min-height: 90vh;
+  background-image: url(/pexels-hasan-albari-1229861.jpg);
+  background-size: cover;
+  /* the background size cover property 
+    helps in making an image responsive */
+  background-position: center;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero h2 {
+  text-align: center;
+  margin: 2rem;
+}
+.hero button {
+  padding: 1rem 4rem;
+  background: lightpink;
+  border: none;
+}
+
+.intro {
+    margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro img {
+  width: 100%;
+}
+.intro-img {
+  flex: 1 1 30rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text {
+  /* flex: 1 1 10rem;   the first digit is flex grow, 
+    second is flex shrink 
+    third is flex basis*/
+  flex: 1 1 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-text h2{
+    padding: 2rem;
+}
+.intro-text p{
+    padding: 1rem;
+}
